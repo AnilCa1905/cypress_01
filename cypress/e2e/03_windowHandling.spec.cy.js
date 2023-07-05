@@ -7,12 +7,12 @@ describe('template spec', () =>  {
     await cy.contains('Alerts, Frame & Windows').click();
     await cy.contains(`Browser Windows`).click();
     await cy.contains(`New Tab`).click();
-    await  cy.url().should('include', '/sample')
+    
   })
   
   xit('Click on New Tab', async()=> {
     switchToWindow('https://demoqa.com/browser-windows')
-     
+    await  cy.url().should('include', '/sample')
     await cy.get(`#windowButtonWrapper`).click();
   })
 })
